@@ -1,4 +1,4 @@
-gnode {
+gnode{
     def app
 
     stage('Clone repository') {
