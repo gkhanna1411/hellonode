@@ -10,7 +10,7 @@ node{
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        sudo docker build . -t firsttest-hellonode:1
+        sudo docker build hellonode
        // app = sudo docker.build("gekhanna/hellonode")
     }
 
