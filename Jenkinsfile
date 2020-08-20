@@ -1,6 +1,10 @@
 node{
     def app
-
+      environment { 
+        registry = "gekhanna/hellonode" 
+        registryCredential = 'dockerhub_id' 
+        dockerImage = '' 
+    }
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
@@ -10,7 +14,7 @@ node{
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-           app = sudo docker.build("gekhanna/hellonode")
+           app = docker.build("gekhanna/hellonode")
     }
 
     stage('Test image') {
