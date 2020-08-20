@@ -10,9 +10,7 @@ node{
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        sh sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
-        sh sudo chmod g+rwx "$HOME/.docker" -R
-        app = docker.build("gekhanna/hellonode")
+           app = sudo docker.build("gekhanna/hellonode")
     }
 
     stage('Test image') {
