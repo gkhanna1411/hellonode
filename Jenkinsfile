@@ -2,7 +2,7 @@ node{
     def app
       environment { 
         registry = "gekhanna/hellonode" 
-        registryCredential = 'dockerhub_id' 
+        registryCredential = 'docker-hub-credentials' 
         dockerImage = '' 
     }
     stage('Clone repository') {
